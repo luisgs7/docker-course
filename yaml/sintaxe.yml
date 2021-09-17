@@ -1,0 +1,7 @@
+host: python
+datacenter:
+  location: São Paulo
+  router: 42
+configutation:
+  - web
+  - dns

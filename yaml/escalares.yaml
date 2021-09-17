@@ -1,0 +1,19 @@
+host: aws
+datacenter:
+  location: São Paulo
+  router: "50"
+
+configuration:
+  - webserver
+  - database
+
+funcionamento: |
+  segunda - das 08: às 17:00
+  terça   - das 09:00 às 18:00
+
+comentarios: >
+  Estamos estudando docker
+  e python
+
+   José pedro
+   jose@email.com

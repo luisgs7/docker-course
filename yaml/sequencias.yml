@@ -1,0 +1,9 @@
+configutation:
+  - webserver
+  - database
+
+database:
+  - mysql
+  - sqlite
+
+database1: [mysql, sqlite]

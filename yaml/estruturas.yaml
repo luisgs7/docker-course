@@ -1,0 +1,14 @@
+---
+host: aws
+datacenter:
+  location: São Paulo
+  router: 40
+---
+host: udemy
+datacenter: Colorado
+router: 50
+---
+host: Google
+datacenter:
+  location: Estados Unidos
+  router: 60

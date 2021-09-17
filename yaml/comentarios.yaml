@@ -1,0 +1,6 @@
+# Configurações do app
+---
+host: aws
+datacenter:
+  location: São Paulo # Localização
+  router: 40

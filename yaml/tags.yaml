@@ -1,0 +1,14 @@
+%TAG ! tag:host:aws:
+---
+host: aws
+datacenter:
+  location: !AWS São paulo
+  router: "50"
+  router1: 51
+---
+host: udemy
+datacenter:
+  location: Colorado
+  router: !!str 45
+  router1: !!int 46
+  router2: !!float 76.3

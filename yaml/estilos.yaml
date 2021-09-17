@@ -1,0 +1,12 @@
+host1: django
+datacenter1:
+  location: Palmas
+  router: 50
+
+configutation1:
+  - web
+  - dns
+
+host2: "django"
+datacenter2: { location: Palmas, router: 50 }
+configutation2: [web, dns]

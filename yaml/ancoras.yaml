@@ -1,0 +1,16 @@
+---
+host: udemy
+datacenter:
+  location: &SP São Paulo
+---
+host: udemy
+datacenter:
+  location: *SP
+
+---
+configuration: &conf
+  - webserver
+  - database
+
+---
+configuration: *conf

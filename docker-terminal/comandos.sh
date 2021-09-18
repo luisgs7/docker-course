@@ -19,3 +19,14 @@ sudo docker image tag postgres:13.1 docker-course
 sudo docker image rm <id> -f
 
 sudo docker run -d -p 8080:80 nginx:1.19.4-alpine
+
+sudo docker run --name linux_alpine --rm -i -t alpine:3.12.1 sh
+
+sudo docker exec -it <id> bash
+
+sudo docker run --name "servidor_web" -d -p 8080:80 -e NGINX_ENTRYPOINT_QUIET_LOGS=1 
+            -v "/home/luis/www/courses/udemy/docker-curso/volumes:/usr/share/nginx/html" nginx:1.19.4
+
+sudo docker build -f Dockerfile -t username/image_name:v1 .
+
+sudo docker run --name "servidor_web" -d -p 8080:80 servido_web:v1

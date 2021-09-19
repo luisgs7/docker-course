@@ -1,0 +1,78 @@
+version: "3.8"
+
+services: 
+  nginx:
+    dockerfile: nginx.dockerfile
+    context: .
+
+  image: username/nginx_app:v1
+  container_name: nginx
+  ports: 
+    - "8080:80"
+  networks: 
+    - nwrede
+  depends_on: 
+    - app1
+    - app2
+    - app3
+
+  pgdata:
+    build: 
+      dockerfile: pgdata.dockerfile
+      context: .
+    image: username/pgdata:v1
+    container_name: pgdata
+    ports: 
+      - "5432"
+    networks: 
+      - nwrede
+    volumes: 
+      - pgdata: /var/lib/postgresql/data/
+
+  app1:
+    build:
+      dockerfile: app.dockerfile
+      context: .
+    image: username/app:v1
+    container_name: app1
+    ports: 
+      - "8000"
+    networks: 
+      - nwrede
+    depends_on: 
+      - pgdata 
+  
+  app2:
+    build:
+      dockerfile: app.dockerfile
+      context: .
+    image: username/app:v1
+    container_name: app2
+    ports: 
+      - "8000"
+    networks: 
+      - nwrede
+    depends_on: 
+      - pgdata  
+ 
+  app3:
+    build:
+      dockerfile: app.dockerfile
+      context: .
+    image: username/app:v1
+    container_name: app3
+    ports: 
+      - "8000"
+    networks: 
+      - nwrede
+    depends_on: 
+      - pgdata 
+    
+
+networks: 
+  nwrede:
+    driver: bridge
+
+volumes: 
+  pgdata:
+  

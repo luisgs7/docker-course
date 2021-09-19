@@ -1,3 +1,5 @@
+## Docker
+
 sudo docker container ls
 
 sudo docker images || sudo docker image ls
@@ -38,3 +40,11 @@ sudo docker network ls
 sudo docker network inspect <name>
 
 sudo docker run --name "container_1_bridge" -d alpine:3.12.1 sleep 5000
+
+## Docker Compose
+
+sudo docker-compose build
+
+sudo docker-compose up -d
+
+sudo docker-compose down

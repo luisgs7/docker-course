@@ -52,7 +52,7 @@ sudo docker-compose down
 # Container Docker com o Mysql
 sudo docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=1234 -p "3306:3306" -d mysql
 
-# Container Docker Com Mysql e Volumo Local
+# Container Docker Com Mysql e Volume Local
 sudo docker run --name mysqldb -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v /home/luis/dev/db/mysql:/var/lib/mysql -d mysql
 
 # Container Docker com o PostgreSQL

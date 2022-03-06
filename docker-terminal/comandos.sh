@@ -57,3 +57,11 @@ sudo docker run --name mysqldb -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v /home/luis/d
 
 # Container Docker com o PostgreSQL
 sudo docker run --name postgresdb -e "POSTGRES_PASSWORD=1234" -p 5432:5432 -v /home/luis/dev/db/postgresql:/var/lib/postgresql/data -d postgres
+
+# Configurar Mysql ou MariaDB
+# Instalar
+sudo dnf install python3.10-dev libmysqlclient-dev 
+
+# talvez precisa instalar 
+sudo dnf install default-libmysqlclient-dev
+
